@@ -1,4 +1,4 @@
-## This pair of functions work together to calculate and store the inverse of a square matrix.
+## These functions work together to calculate and store the inverse of a square matrix.
 
 ## makeCacheMatrix creates a special matrix object that can cache its inverse. When needed,
 ## the inverse can be retrieved from the cache without repeating a potentially costly computation.
@@ -6,10 +6,10 @@
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL               # preallocate variable m
         set <- function(y) {
-               x <<- y          # superassignment operator takes argument to set() and writes it "upstairs" to
+               x <<- y          # superassignment operator takes the argument to set() and writes it "upstairs" to
                                 # the variable x (the argument to makeCacheMatrix) in the parent environment
-               m <<- NULL       # superassignment operator nulls m in the parent environment.
-                                # Needed to clear cached m if set() is used
+               m <<- NULL       # superassignment operator nulls m in the parent environment.Needed to clear cached m 
+                                # if set() is used
         }
         get <- function() x     #get() gets x (the original matrix)
         setinverse <- function(inverse){
